@@ -2,7 +2,7 @@
 
 A modern, single-page developer portfolio built to showcase my work as a **Generative AI Engineer** — production-grade LLM, RAG, and agentic AI systems. The site is fully responsive, animated, and deployed as a static build to GitHub Pages.
 
-🔗 **Live site:** _add your GitHub Pages URL here once deployed_
+🔗 **Live site:**r-aswin-raj.github.io
 
 ---
 
