@@ -1,0 +1,224 @@
+/* ============================================
+   ABOUT — Architecture / Professional Summary
+   ============================================ */
+
+.about {
+  background-color: var(--surface);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.about-summary {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--on-surface-variant);
+  margin-bottom: 2rem;
+}
+
+.about-highlight {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--secondary) 0%, var(--tertiary) 100%);
+  border-radius: var(--rounded-full);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  transform: translateX(-5px);
+  box-shadow: 0 0 0 4px var(--surface);
+}
+
+.timeline-period {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tertiary);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-role {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--on-surface);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-details {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-details li {
+  font-size: 14px;
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.timeline-details li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+}
+
+/* Awards */
+.awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--gradient-primary-subtle);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--rounded-xl);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tertiary);
+  transition: var(--transition-fast);
+}
+
+.award-badge:hover {
+  border-color: var(--tertiary);
+  transform: translateY(-2px);
+}
+
+/* Right column — Education & Certs */
+.about-right-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-right-section:last-child {
+  margin-bottom: 0;
+}
+
+.about-right-title {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.education-card,
+.cert-card {
+  background: var(--surface-container-low);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--rounded-lg);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: var(--transition-default);
+}
+
+.education-card:hover,
+.cert-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+[data-theme="light"] .education-card,
+[data-theme="light"] .cert-card {
+  background: var(--surface-container-lowest);
+}
+
+.education-degree {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--on-surface);
+  margin-bottom: 0.25rem;
+}
+
+.education-school {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.education-year {
+  font-size: 13px;
+  color: var(--tertiary);
+  font-weight: 500;
+}
+
+.cert-name {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--on-surface);
+  margin-bottom: 0.25rem;
+}
+
+.cert-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.cert-year {
+  font-size: 12px;
+  color: var(--tertiary);
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

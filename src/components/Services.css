@@ -1,0 +1,82 @@
+/* ============================================
+   SERVICES — Capability Cards
+   ============================================ */
+
+.services {
+  background-color: var(--surface);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: var(--surface-container-low);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--rounded-lg);
+  padding: 2rem;
+  transition: var(--transition-default);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--hard-shadow);
+  border-color: var(--primary);
+}
+
+[data-theme="light"] .service-card {
+  background: var(--surface-container-lowest);
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--rounded-md);
+  background: var(--gradient-primary-subtle);
+  border: 1px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--secondary);
+  transition: var(--transition-fast);
+}
+
+.service-card:hover .service-icon {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.service-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--on-surface);
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

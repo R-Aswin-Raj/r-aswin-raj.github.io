@@ -1,0 +1,95 @@
+/* ============================================
+   TECH STACK — Categorized Skills Grid
+   ============================================ */
+
+.techstack {
+  background-color: var(--surface);
+}
+
+.techstack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.techstack-category {
+  background: var(--surface-container-low);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--rounded-lg);
+  padding: 2rem;
+  transition: var(--transition-default);
+}
+
+.techstack-category:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+[data-theme="light"] .techstack-category {
+  background: var(--surface-container-lowest);
+}
+
+.techstack-category-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--rounded-md);
+  background: var(--gradient-primary-subtle);
+  border: 1px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--secondary);
+}
+
+.techstack-category-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--on-surface);
+  margin-bottom: 1rem;
+}
+
+.techstack-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--rounded-full);
+  border: 1px solid var(--outline-variant);
+  color: var(--on-surface-variant);
+  background: rgba(218, 188, 233, 0.04);
+  transition: var(--transition-fast);
+  cursor: default;
+}
+
+.tech-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(218, 188, 233, 0.1);
+  transform: translateY(-1px);
+}
+
+.tech-chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .techstack-grid {
+    grid-template-columns: 1fr;
+  }
+}
